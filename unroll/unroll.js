@@ -33,4 +33,22 @@ function isSquareArray(inputArray) {
   return true;
 }
 
+/* Given the current row index, column index, and length of the 2-D input array, determine the next row index and column index 
+given that we are going in a clockwise spiral order. */
+function getNextRowAndColumn(row, column, dimension) {
+  if (row <= column && row + column < dimension) return [row, column + 1];
+  else if (row < column && row + column >= dimension) return [row + 1, column];
+  else if (row >= column && row + column > dimension) return [row, column - 1];
+  else if (row > column && row + column <= dimension) return [row - 1, column];
+}
+
+const square = [
+	[1,2,3,4],
+	[5,6,7,8],
+	[9,10,11,12],
+	[13,14,15,16]
+];
+
+console.log(unroll(square));
+
 module.exports = {unroll, isSquareArray, getNextRowAndColumn};
