@@ -120,3 +120,46 @@ describe("Tests the removeOuterLayer function", function() {
     expect(removeOuterLayer(four_by_four)).toEqual([[6,7], [10,11]]);
   });
 });
+
+describe("Tests the top-level unroll function", function() {
+  it("unrollis a function", function() {
+    expect(typeof unroll).toEqual("function");
+  });
+
+  it("unroll returns error message for invalid input", function() {
+    expect(unroll(306)).toEqual("Invalid input. Your input array must be a square array.");
+    const lastElementNotArray = [
+      [1,2,3,4],
+      [5,6,7,8],
+      [9,10,11,12],
+      "I'm not an array!"
+    ]
+    expect(unroll(lastElementNotArray)).toEqual("Invalid input. Your input array must be a square array.");
+  });
+
+  it("unroll returns the correct unrolled array for base case inputs", function() {
+    expect(unroll([])).toEqual([]);
+    expect(unroll([[1]])).toEqual([1]);
+  });
+
+  it("unroll returns the correct unrolled array for bigger square array inputs", function() {
+    const smallSquareArray = [
+      [1,2],
+      [3,4]
+    ];
+    expect(unroll(smallSquareArray)).toEqual([1,2,4,3]);
+    const lettersArray = [
+      ["a","b", "c"],
+      ["d", "e", "f"],
+      ["g", "h", "i"]
+    ];
+    expect(unroll(lettersArray)).toEqual(["a", "b", "c", "f", "i", "h", "g", "d", "e"]);
+    const largeSquareArray = [
+      [1,2,3,4],
+      [5,6,7,8],
+      [9,10,11,12],
+      [13,14,15,16]
+    ];
+    expect(unroll(largeSquareArray)).toEqual([1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10]);
+  });
+});
