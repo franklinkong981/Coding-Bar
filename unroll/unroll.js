@@ -63,6 +63,7 @@ function getNextRowAndColumn(rowIndex, columnIndex, last_index) {
   else if (rowIndex < columnIndex && rowIndex + columnIndex >= last_index) return [rowIndex + 1, columnIndex];
   else if (rowIndex >= columnIndex && rowIndex + columnIndex > last_index) return [rowIndex, columnIndex - 1];
   else if (rowIndex > columnIndex && rowIndex + columnIndex <= last_index) return [rowIndex - 1, columnIndex];
+  else return [0,0];
 }
 
 /* Removes the outermost layer of the inputArray by modifying the inputArray in place. This consists of deleting the first and last

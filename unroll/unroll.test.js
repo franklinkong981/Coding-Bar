@@ -64,5 +64,26 @@ describe("Tests the getNextRowAndColumn function", function() {
     expect(getNextRowAndColumn(0,3,3)).toEqual([1,3]);
     expect(getNextRowAndColumn(3,3,3)).toEqual([3,2]);
     expect(getNextRowAndColumn(3,0,3)).toEqual([2,0]);
+    //test edge case
+    expect(getNextRowAndColumn([0,0,0])).toEqual([0,0]);
+  });
+});
+
+describe("Tests the unrollOuterLayer function", function() {
+  it("unrollOuterLayer is a function", function() {
+    expect(typeof unrollOuterLayer).toEqual("function");
+  });
+
+  it("Returns an array with the correct clockwise spiral order of the input array's outermost layer", function() {
+    expect(unrollOuterLayer([])).toEqual([]);
+    expect(unrollOuterLayer([[1]])).toEqual([1]);
+    expect(unrollOuterLayer([[1,2], [3,4]])).toEqual([1,2,4,3]);
+    const largeSquareArray = [
+      [1,2,3,4],
+      [5,6,7,8],
+      [9,10,11,12],
+      [13,14,15,16]
+    ];
+    expect(unrollOuterLayer(largeSquareArray)).toEqual([1,2,3,4,8,12,16,15,14,13,9,5]);
   });
 });
