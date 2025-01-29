@@ -52,3 +52,17 @@ describe("Tests the getOuterLayerLength function", function() {
     expect(getOuterLayerLength(4)).toEqual(12);
   });
 });
+
+describe("Tests the getNextRowAndColumn function", function() {
+  it("getNextRowAndColumn is a function", function() {
+    expect(typeof getNextRowAndColumn).toEqual("function");
+  });
+
+  it("Returns the correct next row and column", function() {
+    expect(getNextRowAndColumn(0,0,3)).toEqual([0,1]);
+    expect(getNextRowAndColumn(0,1,3)).toEqual([0,2]);
+    expect(getNextRowAndColumn(0,3,3)).toEqual([1,3]);
+    expect(getNextRowAndColumn(3,3,3)).toEqual([3,2]);
+    expect(getNextRowAndColumn(3,0,3)).toEqual([2,0]);
+  });
+});
