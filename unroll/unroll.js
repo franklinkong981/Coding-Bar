@@ -1,14 +1,18 @@
-/* Unrolls a square array of arrays into a 1-D array that contains all the individual values in the inputArray in a spiral order. */
+/* Unrolls a square array of arrays into a 1-D array that contains all the individual values in the inputArray in a clockwise spiral order. 
+The function calls itself recursively by first unrolling the outer ring of the input array, then the next outermost ring, and so on,
+until the center is reached, which is eiher just one value or an empty array.*/
 function unroll(inputArray) {
+  //Assuming there is no validation outside this file, make sure the input is valid.
   if (!isSquareArray(inputArray)) return "Invalid input. Your input array must be a square array.";
 
+  //base cases: If inputArray has even length, innermost ring = no values. If inputArray has odd length, innermost ring = 1 value.
   if (inputArray.length === 0) return [];
   else if (inputArray.length === 1) return [inputArray[0][0]];
 
-  //we know the first value in the unrolledArray will be the first element in the first inner array in inputArray.
   const unrolledArray = [];
+  /* recursive call: Get the unrolled spiral order of the outermost layer, then remove the outermost layer and append the unrolled spiral
+  order of that, etc. all the way until one of the base cass is reached. */
   unrolledArray.push(...unrollOuterLayer(inputArray), ...unroll(removeOuterLayer(inputArray)));
-  
   return unrolledArray;
 }
 
@@ -25,6 +29,9 @@ function isSquareArray(inputArray) {
   return true;
 }
 
+/* Get the unrolled clockwise spiral order of the outermost layer of the input array. If you imagine the 2-D square inputArray as a grid of values,
+the outermost layer is defined as the values that make up the perimeter of the grid. So, the outermost layer consists of the first inner array,
+the last inner array, as well as the first and last values of the other inner arrays.*/
 function unrollOuterLayer(inputArray) {
   const unrolledOuterLayer = [];
   let currentRowIndex = 0;
@@ -41,6 +48,9 @@ function unrollOuterLayer(inputArray) {
   return unrolledOuterLayer;
 }
 
+/* Calculates the total number of values that make up the outermost layer of the 2-D square array of length arr_length.
+For instance, if the arr_length is 4, that means there are 4 * 4 = 16 total values, and the number of values that make up the 
+outermost layer would be 4 + 3 + 3 + 2 = 12. */
 function getOuterLayerLength(arr_length) {
   return arr_length + (arr_length - 1) + (arr_length - 1) + (arr_length - 2);
 }
@@ -54,10 +64,14 @@ function getNextRowAndColumn(rowIndex, columnIndex, last_index) {
   else if (rowIndex > columnIndex && rowIndex + columnIndex <= last_index) return [rowIndex - 1, columnIndex];
 }
 
+/* Removes the outermost layer of the inputArray by modifying the inputArray in place. This consists of deleting the first and last
+inner arrays, followed by deleting the first and last values of all remaining inner arrays. */
 function removeOuterLayer(inputArray) {
+  //delete first and last inner arrays.
   inputArray.shift();
   inputArray.pop();
 
+  //delete first and last values of all remaining inner arrays.
   for (let innerArray of inputArray) {
     innerArray.shift();
     innerArray.pop();
@@ -65,21 +79,5 @@ function removeOuterLayer(inputArray) {
 
   return inputArray;
 }
-
-const square = [
-	[1,2,3,4],
-	[5,6,7,8],
-	[9,10,11,12],
-	[13,14,15,16]
-];
-
-const smallerSquare = [
-  ["a", "b", "c"],
-  ["d", "e", "f"],
-  ["g", "h", "i"]
-];
-
-console.log(unroll(square));
-console.log(unroll(smallerSquare));
 
 module.exports = {unroll, isSquareArray, unrollOuterLayer, getOuterLayerLength, getNextRowAndColumn, removeOuterLayer};
