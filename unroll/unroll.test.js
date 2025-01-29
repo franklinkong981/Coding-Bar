@@ -77,7 +77,11 @@ describe("Tests the unrollOuterLayer function", function() {
   it("Returns an array with the correct clockwise spiral order of the input array's outermost layer", function() {
     expect(unrollOuterLayer([])).toEqual([]);
     expect(unrollOuterLayer([[1]])).toEqual([1]);
-    expect(unrollOuterLayer([[1,2], [3,4]])).toEqual([1,2,4,3]);
+    const smallSquareArray = [
+      [1,2],
+      [3,4]
+    ];
+    expect(unrollOuterLayer(smallSquareArray)).toEqual([1,2,4,3]);
     const largeSquareArray = [
       [1,2,3,4],
       [5,6,7,8],
@@ -85,5 +89,34 @@ describe("Tests the unrollOuterLayer function", function() {
       [13,14,15,16]
     ];
     expect(unrollOuterLayer(largeSquareArray)).toEqual([1,2,3,4,8,12,16,15,14,13,9,5]);
+  });
+});
+
+describe("Tests the removeOuterLayer function", function() {
+  it("removeOuterLayeris a function", function() {
+    expect(typeof removeOuterLayer).toEqual("function");
+  });
+
+  it("Returns the correct array with the outer layer removed", function() {
+    expect(removeOuterLayer([])).toEqual([]);
+    expect(removeOuterLayer([[1]])).toEqual([]);
+    const two_by_two = [
+      [1,2],
+      [3,4]
+    ];
+    expect(removeOuterLayer(two_by_two)).toEqual([]);
+    const three_by_three = [
+      [1,2,3],
+      [4,5,6],
+      [7,8,9]
+    ];
+    expect(removeOuterLayer(three_by_three)).toEqual([[5]]);
+    const four_by_four = [
+      [1,2,3,4],
+      [5,6,7,8],
+      [9,10,11,12],
+      [13,14,15,16]
+    ];
+    expect(removeOuterLayer(four_by_four)).toEqual([[6,7], [10,11]]);
   });
 });

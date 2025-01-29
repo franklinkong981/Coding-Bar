@@ -67,9 +67,10 @@ function getNextRowAndColumn(rowIndex, columnIndex, last_index) {
 }
 
 /* Removes the outermost layer of the inputArray by modifying the inputArray in place. This consists of deleting the first and last
-inner arrays, followed by deleting the first and last values of all remaining inner arrays. 
-NOTE: inputArray must be a 2-D square array that has a length of at least 2.*/
+inner arrays, followed by deleting the first and last values of all remaining inner arrays. */
 function removeOuterLayer(inputArray) {
+  if (inputArray.length < 2) return [];
+
   //delete first and last inner arrays.
   inputArray.shift();
   inputArray.pop();
