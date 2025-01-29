@@ -52,7 +52,8 @@ function unrollOuterLayer(inputArray) {
 For instance, if the arr_length is 4, that means there are 4 * 4 = 16 total values, and the number of values that make up the 
 outermost layer would be 4 + 3 + 3 + 2 = 12. */
 function getOuterLayerLength(arr_length) {
-  return arr_length + (arr_length - 1) + (arr_length - 1) + (arr_length - 2);
+
+  return (arr_length > 1) ? (arr_length + (arr_length - 1) + (arr_length - 1) + (arr_length - 2)) : arr_length;
 }
 
 /* Given the current row index, column index, and length of the 2-D input array, determine the next row index and column index 
@@ -65,7 +66,8 @@ function getNextRowAndColumn(rowIndex, columnIndex, last_index) {
 }
 
 /* Removes the outermost layer of the inputArray by modifying the inputArray in place. This consists of deleting the first and last
-inner arrays, followed by deleting the first and last values of all remaining inner arrays. */
+inner arrays, followed by deleting the first and last values of all remaining inner arrays. 
+NOTE: inputArray must be a 2-D square array that has a length of at least 2.*/
 function removeOuterLayer(inputArray) {
   //delete first and last inner arrays.
   inputArray.shift();
