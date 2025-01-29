@@ -39,4 +39,16 @@ describe("Tests the function isSquareArray", function() {
   });
 });
 
+describe("Tests the getOuterLayerLength function", function() {
+  it("getOuterLayerLength is a function", function() {
+    expect(typeof getOuterLayerLength).toEqual("function");
+  });
 
+  it("Returns the correct length of the outermost layer of a 2-D square array given the array length", function() {
+    expect(getOuterLayerLength(0)).toEqual(0);
+    expect(getOuterLayerLength(1)).toEqual(1);
+    expect(getOuterLayerLength(2)).toEqual(4);
+    expect(getOuterLayerLength(3)).toEqual(8);
+    expect(getOuterLayerLength(4)).toEqual(12);
+  });
+});
