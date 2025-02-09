@@ -1,3 +1,7 @@
+/* The generic Menu component that can be used to list either the current snack or drink menu items.
+Each menu item is a link that takes you to a page showing more information for that item.
+Whether snack or drink items are listed depends on the value of the title prop. */
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Menu.css";

@@ -16,6 +16,7 @@ function App() {
   const [drinks, setDrinks] = useState([]);
 
   useEffect(() => {
+    //upon initial loading, fetch current list of snacks and drinks from db.json using SnackOrBoozeApi class methods.
     async function getMenuItems() {
       let updatedSnacks = await SnackOrBoozeApi.getSnacks();
       setSnacks(snacks => updatedSnacks);

@@ -1,3 +1,5 @@
+/* Component for navbar at the top of each page. Left side is link to homepage, right side are links to snack and drink menus. */
+
 import React from "react";
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";

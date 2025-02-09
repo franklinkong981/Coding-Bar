@@ -1,3 +1,5 @@
+/* Homepage that lists the number of snack and drink items currently on the menu and contains links to the snack and drink menu. */
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Menu.css";

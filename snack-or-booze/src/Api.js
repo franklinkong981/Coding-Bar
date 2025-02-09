@@ -1,3 +1,6 @@
+/*File that contains SnackOrBoozeApi which contains the methods to fetch and add snack/drink menu items. Uses db.json as the backend database
+for snack and drink menu items through the json-server library. */
+
 import axios from "axios";
 
 const BASE_API_URL = "http://localhost:5000";

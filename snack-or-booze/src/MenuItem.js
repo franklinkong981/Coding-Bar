@@ -1,3 +1,7 @@
+/* The generic MenuItem component that can be used to list details such as the name, description, recipe, and serving instructions
+for either a snack menu item or a drink menu item.
+Through the cantFind prop, either redirects user to snack menu or drink menu page for invalid id URL parameter. */
+
 import React from "react";
 import { Redirect, useParams } from "react-router-dom";
 import { Card, CardBody, CardTitle, CardText } from "reactstrap";
