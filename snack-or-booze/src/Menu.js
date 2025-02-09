@@ -12,8 +12,7 @@ function Menu({ items, title }) {
             {title == "Snacks" ? "Food" : "Drinks"} Menu
           </CardTitle>
           <CardText>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            Here's the list of {title == "Snacks" ? "foods" : "drinks"} that we currently offer:
           </CardText>
           <ListGroup>
             {items.map(item => (
