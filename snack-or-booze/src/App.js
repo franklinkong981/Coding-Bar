@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 import "./App.css";
-import Home from "./Home";
+
 import SnackOrBoozeApi from "./Api";
+import Home from "./Home";
 import NavBar from "./NavBar";
-import Menu from "./FoodMenu";
-import Snack from "./FoodItem";
+import Menu from "./Menu";
+import MenuItem from "./MenuItem";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,7 +42,7 @@ function App() {
               <Menu snacks={snacks} title="Snacks" />
             </Route>
             <Route path="/snacks/:id">
-              <Snack items={snacks} cantFind="/snacks" />
+              <MenuItem items={snacks} cantFind="/snacks" />
             </Route>
             <Route>
               <p>Hmmm. I can't seem to find what you want.</p>

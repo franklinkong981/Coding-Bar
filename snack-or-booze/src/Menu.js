@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./FoodMenu.css";
+import "./Menu.css";
 import {Card, CardBody, CardTitle, CardText, ListGroup, ListGroupItem} from "reactstrap";
 
-function FoodMenu({ snacks }) {
+function Menu({ snacks }) {
   return (
     <section className="col-md-4">
       <Card>
@@ -28,4 +28,4 @@ function FoodMenu({ snacks }) {
   );
 }
 
-export default FoodMenu;
+export default Menu;
