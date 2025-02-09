@@ -36,7 +36,7 @@ function App() {
         <main>
           <Switch>
             <Route exact path="/">
-              <Home snacks={snacks} />
+              <Home numberSnacks={snacks.length} numberDrinks={drinks.length} />
             </Route>
             <Route exact path="/snacks">
               <Menu items={snacks} title="Snacks" />

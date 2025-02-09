@@ -1,7 +1,9 @@
 import React from "react";
-import { Card, CardBody, CardTitle } from "reactstrap";
+import { Link } from "react-router-dom";
+import "./Menu.css";
+import { Card, CardBody, CardTitle, CardText, ListGroup, ListGroupItem } from "reactstrap";
 
-function Home() {
+function Home({numberSnacks, numberDrinks}) {
   return (
     <section className="col-md-8">
       <Card>
@@ -11,6 +13,17 @@ function Home() {
               Welcome to Silicon Valley's premier coding cafe and bar: Snack or Booze!
             </h3>
           </CardTitle>
+          <CardText>
+            We currently have {numberSnacks} snacks and {numberDrinks} drinks on our menu!
+          </CardText>
+          <ListGroup>
+            <Link to='/snacks' key='snacks-homepage-link'>
+              <ListGroupItem>Food Menu</ListGroupItem>
+            </Link>
+            <Link to='/drinks' key='drinks-homepage-link'>
+              <ListGroupItem>Drinks Menu</ListGroupItem>
+            </Link>
+          </ListGroup>
         </CardBody>
       </Card>
     </section>
