@@ -8,6 +8,7 @@ import Home from "./Home";
 import NavBar from "./NavBar";
 import Menu from "./Menu";
 import MenuItem from "./MenuItem";
+import AddMenuItemForm from "./AddMenuItemForm";
 import NotFound from "./NotFound";
 
 function App() {

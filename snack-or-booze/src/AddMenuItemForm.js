@@ -1,10 +1,10 @@
 import React from "react";
 
 import {useFormik} from "formik";
-import {useNavigate} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 const AddMenuItemForm = ({addItemFunc, menuToAddTo}) => {
-  const navigate = useNavigate();
+  const history = useHistory();
 
   const isSnackMenu = (menuToAddTo == "Snacks");
 
@@ -28,7 +28,7 @@ const AddMenuItemForm = ({addItemFunc, menuToAddTo}) => {
     validateOnBlur: false,
     async onSubmit(values) {
       await addItemFunc(values);
-      isSnackMenu ? navigate("/snacks") : navigate("/drinks");
+      isSnackMenu ? history.push("/snacks") : history.push("/drinks");
     }
   });
 
@@ -57,7 +57,7 @@ const AddMenuItemForm = ({addItemFunc, menuToAddTo}) => {
       {formik.errors.name ? <div className="AddMenuItemForm-error">{formik.errors.name}</div> : null} <br/>
 
       <button className="AddMenuItemForm-submit-button" type="submit">Add {isSnackMenu ? "Snack" : "Drink"}</button>
-      <button className="AddMenuItemForm-back-button" type="button" onClick={() => isSnackMenu ? navigate("/snacks") : navigate("/drinks")}>Back</button>
+      <button className="AddMenuItemForm-back-button" type="button" onClick={() => isSnackMenu ? history.push("/snacks") : history.push("/drinks")}>Back</button>
     </form>
   );
 };
