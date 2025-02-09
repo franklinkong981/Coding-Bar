@@ -39,7 +39,7 @@ function App() {
               <Home snacks={snacks} />
             </Route>
             <Route exact path="/snacks">
-              <Menu snacks={snacks} title="Snacks" />
+              <Menu items={snacks} title="Snacks" />
             </Route>
             <Route path="/snacks/:id">
               <MenuItem items={snacks} cantFind="/snacks" />
