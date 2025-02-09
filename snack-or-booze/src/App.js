@@ -31,6 +31,14 @@ function App() {
     return <p>Loading &hellip;</p>;
   }
 
+  const addSnack = async (newSnack) => {
+    await SnackOrBoozeApi.addSnack(newSnack);
+  };
+
+  const addDrink = async (newDrink) => {
+    await SnackOrBoozeApi.addDrink(newDrink);
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
