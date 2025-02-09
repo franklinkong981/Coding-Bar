@@ -10,14 +10,17 @@ import Snack from "./FoodItem";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [snacks, setSnacks] = useState([]);
+  const [drinks, setDrinks] = useState([]);
 
   useEffect(() => {
-    async function getSnacks() {
-      let snacks = await SnackOrBoozeApi.getSnacks();
-      setSnacks(snacks);
+    async function getMenuItems() {
+      let updatedSnacks = await SnackOrBoozeApi.getSnacks();
+      setSnacks(snacks => updatedSnacks);
+      let updatedDrinks = await SnackOrBoozeApi.getDrinks();
+      setDrinks(drinks => updatedDrinks);
       setIsLoading(false);
     }
-    getSnacks();
+    getMenuItems();
   }, []);
 
   if (isLoading) {
