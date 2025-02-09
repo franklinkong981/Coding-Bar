@@ -8,23 +8,28 @@ import "./Menu.css";
 import {Card, CardBody, CardTitle, CardText, ListGroup, ListGroupItem} from "reactstrap";
 
 function Menu({ items, title }) {
+  const isSnack = (title === "Snacks");
+
   return (
     <section className="col-md-4">
       <Card>
         <CardBody>
           <CardTitle className="font-weight-bold text-center">
-            {title == "Snacks" ? "Snack" : "Drinks"} Menu
+            {isSnack ? "Snack" : "Drinks"} Menu
           </CardTitle>
           <CardText>
-            Here's the list of {title == "Snacks" ? "snacks" : "drinks"} that we currently offer:
+            Here's the list of {isSnack ? "snacks" : "drinks"} that we currently offer:
           </CardText>
+
           <ListGroup>
             {items.map(item => (
-              <Link to={title == "Snacks" ? `/snacks/${item.id}` : `/drinks/${item.id}`} key={item.id}>
+              <Link to={isSnack ? `/snacks/${item.id}` : `/drinks/${item.id}`} key={item.id}>
                 <ListGroupItem>{item.name}</ListGroupItem>
               </Link>
             ))}
           </ListGroup>
+
+          <Link to={isSnack ? `/snacks/add` : '/drinks/add'}>Add a new {isSnack ? "snack" : "drink"}</Link>
         </CardBody>
       </Card>
     </section>
