@@ -19,9 +19,29 @@ class SnackOrBoozeApi {
     return result.data;
   }
 
+  static async addSnack(newSnack) {
+    await axios.post(`${BASE_API_URL}/snacks`, {
+      id: newSnack.name.toLowerCase(),
+      name: newSnack.name,
+      description: newSnack.description,
+      recipe: newSnack.recipe,
+      serve: newSnack.serve
+    });
+  }
+
   static async getDrinks() {
     const result = await axios.get(`${BASE_API_URL}/drinks`);
     return result.data;
+  }
+
+  static async addDrink(newDrink) {
+    await axios.poast(`${BASE_API_URL}/drinks`, {
+      id: newDrink.toLowerCase(),
+      name: newDrink.name,
+      description: newDrink.description,
+      recipe: newDrink.recipe,
+      serve: newDrink.serve
+    });
   }
 
 }
