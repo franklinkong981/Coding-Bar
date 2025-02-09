@@ -1,14 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./FoodMenu.css";
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  ListGroup,
-  ListGroupItem
-} from "reactstrap";
+import {Card, CardBody, CardTitle, CardText, ListGroup, ListGroupItem} from "reactstrap";
 
 function FoodMenu({ snacks }) {
   return (
