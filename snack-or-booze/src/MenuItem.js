@@ -10,6 +10,7 @@ function MenuItem({ items, cantFind }) {
   const { id } = useParams();
 
   let item = items.find(itemObj => itemObj.id === id);
+  //if id URL parameter doesn't match the ids of any item in the snacks/drinks menu, redirect to snack/drinks menu page.
   if (!item) return <Redirect to={cantFind} />;
 
   return (
