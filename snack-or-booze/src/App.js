@@ -8,6 +8,7 @@ import Home from "./Home";
 import NavBar from "./NavBar";
 import Menu from "./Menu";
 import MenuItem from "./MenuItem";
+import NotFound from "./NotFound";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -51,7 +52,7 @@ function App() {
               <MenuItem items={drinks} cantFind="/drinks" />
             </Route>
             <Route>
-              <p>Hmmm. I can't seem to find what you want.</p>
+              <NotFound />
             </Route>
           </Switch>
         </main>

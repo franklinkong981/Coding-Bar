@@ -10,7 +10,7 @@ function Home({numberSnacks, numberDrinks}) {
         <CardBody className="text-center">
           <CardTitle>
             <h3 className="font-weight-bold">
-              Welcome to Silicon Valley's premier coding cafe and bar: Snack or Booze!
+              Welcome to Silicon Valley's Premier Coding Cafe/Bar: Snack or Booze!
             </h3>
           </CardTitle>
           <CardText>
@@ -18,7 +18,7 @@ function Home({numberSnacks, numberDrinks}) {
           </CardText>
           <ListGroup>
             <Link to='/snacks' key='snacks-homepage-link'>
-              <ListGroupItem>Food Menu</ListGroupItem>
+              <ListGroupItem>Snack Menu</ListGroupItem>
             </Link>
             <Link to='/drinks' key='drinks-homepage-link'>
               <ListGroupItem>Drinks Menu</ListGroupItem>

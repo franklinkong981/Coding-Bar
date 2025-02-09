@@ -9,10 +9,10 @@ function Menu({ items, title }) {
       <Card>
         <CardBody>
           <CardTitle className="font-weight-bold text-center">
-            {title == "Snacks" ? "Food" : "Drinks"} Menu
+            {title == "Snacks" ? "Snack" : "Drinks"} Menu
           </CardTitle>
           <CardText>
-            Here's the list of {title == "Snacks" ? "foods" : "drinks"} that we currently offer:
+            Here's the list of {title == "Snacks" ? "snacks" : "drinks"} that we currently offer:
           </CardText>
           <ListGroup>
             {items.map(item => (
