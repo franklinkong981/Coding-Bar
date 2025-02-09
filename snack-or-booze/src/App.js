@@ -48,18 +48,28 @@ function App() {
             <Route exact path="/">
               <Home numberSnacks={snacks.length} numberDrinks={drinks.length} />
             </Route>
+
             <Route exact path="/snacks">
               <Menu items={snacks} title="Snacks" />
             </Route>
             <Route exact path="/drinks">
               <Menu items={drinks} title="Drinks" />
             </Route>
+
+            <Route exact path="/snacks/add">
+              <AddMenuItemForm addItemFunc={addSnack} menuToAddTo="Snacks" />
+            </Route>
+            <Route exact path="/drinks/add">
+              <AddMenuItemForm addItemFunc={addDrink} menuToAddTo="Drinks" />
+            </Route>
+
             <Route path="/snacks/:id">
               <MenuItem items={snacks} cantFind="/snacks" />
             </Route>
             <Route path="/drinks/:id">
               <MenuItem items={drinks} cantFind="/drinks" />
             </Route>
+
             <Route>
               <NotFound />
             </Route>

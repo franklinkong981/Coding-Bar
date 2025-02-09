@@ -26,8 +26,8 @@ const AddMenuItemForm = ({addItemFunc, menuToAddTo}) => {
     validate,
     validateOnChange: false,
     validateOnBlur: false,
-    onSubmit: values => {
-      addItemFunc(values);
+    async onSubmit(values) {
+      await addItemFunc(values);
       isSnackMenu ? navigate("/snacks") : navigate("/drinks");
     }
   });
