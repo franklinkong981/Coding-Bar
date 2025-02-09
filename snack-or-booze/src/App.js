@@ -41,6 +41,9 @@ function App() {
             <Route exact path="/snacks">
               <Menu items={snacks} title="Snacks" />
             </Route>
+            <Route exact path="/drinks">
+              <Menu items={drinks} title="Drinks" />
+            </Route>
             <Route path="/snacks/:id">
               <MenuItem items={snacks} cantFind="/snacks" />
             </Route>
