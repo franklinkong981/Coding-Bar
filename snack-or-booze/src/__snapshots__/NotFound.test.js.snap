@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <NotFound/> rendering matches the snapshot for the NotFound component 1`] = `
+<DocumentFragment>
+  <section
+    class="col-md-8"
+    style="color: black;"
+  >
+    <p>
+      Hmmm. I can't seem to find the page you're looking for.
+    </p>
+    <a
+      href="/"
+    >
+      Home
+    </a>
+  </section>
+</DocumentFragment>
+`;
