@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <Menu/> rendering for drinks matches the snapshot for the Drink Menu component 1`] = `
+<DocumentFragment>
+  <section
+    class="col-md-4"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-body"
+      >
+        <h5
+          class="font-weight-bold text-center card-title"
+        >
+          Drinks Menu
+        </h5>
+        <p
+          class="card-text"
+        >
+          Here's the list of drinks that we currently offer:
+        </p>
+        <ul
+          class="list-group"
+        >
+          <a
+            href="/drinks/martini"
+          >
+            <li
+              class="list-group-item"
+            >
+              Martini
+            </li>
+          </a>
+          <a
+            href="/drinks/negroni"
+          >
+            <li
+              class="list-group-item"
+            >
+              Negroni
+            </li>
+          </a>
+          <a
+            href="/drinks/gin-and-tonic"
+          >
+            <li
+              class="list-group-item"
+            >
+              Gin and Tonic
+            </li>
+          </a>
+        </ul>
+        <a
+          href="/drinks/add"
+        >
+          Add a new drink
+        </a>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Test <Menu/> rendering for snacks matches the snapshot for the Snack Menu component 1`] = `
+<DocumentFragment>
+  <section
+    class="col-md-4"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-body"
+      >
+        <h5
+          class="font-weight-bold text-center card-title"
+        >
+          Snack Menu
+        </h5>
+        <p
+          class="card-text"
+        >
+          Here's the list of snacks that we currently offer:
+        </p>
+        <ul
+          class="list-group"
+        >
+          <a
+            href="/snacks/nachos"
+          >
+            <li
+              class="list-group-item"
+            >
+              Nachos
+            </li>
+          </a>
+          <a
+            href="/snacks/hummus"
+          >
+            <li
+              class="list-group-item"
+            >
+              Hummus
+            </li>
+          </a>
+          <a
+            href="/snacks/arugula-and-walnut-salad"
+          >
+            <li
+              class="list-group-item"
+            >
+              Arugula and Walnut Salad
+            </li>
+          </a>
+        </ul>
+        <a
+          href="/snacks/add"
+        >
+          Add a new snack
+        </a>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
