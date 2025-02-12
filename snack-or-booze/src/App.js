@@ -20,9 +20,9 @@ function App() {
     //upon initial loading, fetch current list of snacks and drinks from db.json using SnackOrBoozeApi class methods.
     async function getMenuItems() {
       let updatedSnacks = await SnackOrBoozeApi.getSnacks();
-      setSnacks(snacks => updatedSnacks);
+      setSnacks(updatedSnacks);
       let updatedDrinks = await SnackOrBoozeApi.getDrinks();
-      setDrinks(drinks => updatedDrinks);
+      setDrinks(updatedDrinks);
       setIsLoading(false);
     }
     getMenuItems();
@@ -34,10 +34,14 @@ function App() {
 
   const addSnack = async (newSnack) => {
     await SnackOrBoozeApi.addSnack(newSnack);
+    let updatedSnacks = await SnackOrBoozeApi.getSnacks();
+    setSnacks(updatedSnacks);
   };
 
   const addDrink = async (newDrink) => {
     await SnackOrBoozeApi.addDrink(newDrink);
+    let updatedDrinks = await SnackOrBoozeApi.getDrinks();
+    setDrinks(updatedDrinks);
   };
 
   return (

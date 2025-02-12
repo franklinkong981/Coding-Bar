@@ -35,8 +35,8 @@ class SnackOrBoozeApi {
   }
 
   static async addDrink(newDrink) {
-    await axios.poast(`${BASE_API_URL}/drinks`, {
-      id: newDrink.toLowerCase(),
+    await axios.post(`${BASE_API_URL}/drinks`, {
+      id: newDrink.name.toLowerCase(),
       name: newDrink.name,
       description: newDrink.description,
       recipe: newDrink.recipe,

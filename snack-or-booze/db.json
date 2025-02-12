@@ -20,13 +20,6 @@
       "description": "Like regular tonic, but with gin.",
       "recipe": "Mix 2 parts gin & 1 part tonic water.",
       "serve": "Serve in a tall glass over ice, garnished with a lime wedge."
-    },
-    {
-      "id": "diet-coke",
-      "name": "Diet Coke",
-      "description": "Crisp!",
-      "recipe": "Open can.",
-      "serve": "Immediately."
     }
   ],
   "snacks": [
