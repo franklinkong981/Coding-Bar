@@ -41,7 +41,7 @@ const AddMenuItemForm = ({addItemFunc, menuToAddTo}) => {
       <Card>
         <CardBody>
           <CardTitle className="font-weight-bold text-center">
-            <h2 className="AddMenuItemForm-instructions">Add New Item to the {isSnackMenu ? "Snacks" : "Drinks"} Menu.</h2>
+            <p className="AddMenuItemForm-instructions">Add New Item to the {isSnackMenu ? "Snacks" : "Drinks"} Menu.</p>
           </CardTitle>
           
           <form className="AddMenuItemForm" onSubmit={formik.handleSubmit}>

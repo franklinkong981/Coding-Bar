@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <AddMenuItemForm/> rendering for adding a drink matches the snapshot for the AddMenuItemForm component for adding drinks 1`] = `
+<DocumentFragment>
+  <section
+    class="col-md-4"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-body"
+      >
+        <h5
+          class="font-weight-bold text-center card-title"
+        >
+          <p
+            class="AddMenuItemForm-instructions"
+          >
+            Add New Item to the Drinks Menu.
+          </p>
+        </h5>
+        <form
+          class="AddMenuItemForm"
+        >
+          <label
+            class="AddMenuItemForm-label"
+            for="AddMenuItemForm-name-field"
+          >
+            Name:
+          </label>
+          <input
+            class="AddMenuItemForm-input"
+            id="AddMenuItemForm-name-field"
+            name="name"
+            size="25"
+            type="text"
+            value=""
+          />
+           
+          <br />
+          <label
+            class="AddMenuItemForm-label"
+            for="AddMenuItemForm-description-field"
+          >
+            Description:
+          </label>
+          <input
+            class="AddMenuItemForm-input"
+            id="AddMenuItemForm-description-field"
+            name="description"
+            size="25"
+            type="text"
+            value=""
+          />
+           
+          <br />
+          <label
+            class="AddMenuItemForm-label"
+            for="AddMenuItemForm-recipe-field"
+          >
+            Recipe Instructions:
+          </label>
+          <input
+            class="AddMenuItemForm-input"
+            id="AddMenuItemForm-recipe-field"
+            name="recipe"
+            size="25"
+            type="text"
+            value=""
+          />
+           
+          <br />
+          <label
+            class="AddMenuItemForm-label"
+            for="AddMenuItemForm-serve-field"
+          >
+            Serving Instructions:
+          </label>
+          <input
+            class="AddMenuItemForm-input"
+            id="AddMenuItemForm-serve-field"
+            name="serve"
+            size="25"
+            type="text"
+            value=""
+          />
+           
+          <br />
+          <button
+            class="AddMenuItemForm-submit-button"
+            type="submit"
+          >
+            Add Drink
+          </button>
+          <button
+            class="AddMenuItemForm-back-button"
+            type="button"
+          >
+            Back
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Test <AddMenuItemForm/> rendering for adding a snack matches the snapshot for the AddMenuItemForm component for adding snacks 1`] = `
+<DocumentFragment>
+  <section
+    class="col-md-4"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="card-body"
+      >
+        <h5
+          class="font-weight-bold text-center card-title"
+        >
+          <p
+            class="AddMenuItemForm-instructions"
+          >
+            Add New Item to the Snacks Menu.
+          </p>
+        </h5>
+        <form
+          class="AddMenuItemForm"
+        >
+          <label
+            class="AddMenuItemForm-label"
+            for="AddMenuItemForm-name-field"
+          >
+            Name:
+          </label>
+          <input
+            class="AddMenuItemForm-input"
+            id="AddMenuItemForm-name-field"
+            name="name"
+            size="25"
+            type="text"
+            value=""
+          />
+           
+          <br />
+          <label
+            class="AddMenuItemForm-label"
+            for="AddMenuItemForm-description-field"
+          >
+            Description:
+          </label>
+          <input
+            class="AddMenuItemForm-input"
+            id="AddMenuItemForm-description-field"
+            name="description"
+            size="25"
+            type="text"
+            value=""
+          />
+           
+          <br />
+          <label
+            class="AddMenuItemForm-label"
+            for="AddMenuItemForm-recipe-field"
+          >
+            Recipe Instructions:
+          </label>
+          <input
+            class="AddMenuItemForm-input"
+            id="AddMenuItemForm-recipe-field"
+            name="recipe"
+            size="25"
+            type="text"
+            value=""
+          />
+           
+          <br />
+          <label
+            class="AddMenuItemForm-label"
+            for="AddMenuItemForm-serve-field"
+          >
+            Serving Instructions:
+          </label>
+          <input
+            class="AddMenuItemForm-input"
+            id="AddMenuItemForm-serve-field"
+            name="serve"
+            size="25"
+            type="text"
+            value=""
+          />
+           
+          <br />
+          <button
+            class="AddMenuItemForm-submit-button"
+            type="submit"
+          >
+            Add Snack
+          </button>
+          <button
+            class="AddMenuItemForm-back-button"
+            type="button"
+          >
+            Back
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
