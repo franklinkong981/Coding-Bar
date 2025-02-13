@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <Home/> rendering matches the snapshot for the Home component 1`] = `
+<DocumentFragment>
+  <section
+    class="col-md-8"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="text-center card-body"
+      >
+        <h5
+          class="card-title"
+        >
+          <p
+            class="font-weight-bold"
+          >
+            Welcome to Silicon Valley's Premier Coding Cafe/Bar: Snack or Booze!
+          </p>
+        </h5>
+        <p
+          class="card-text"
+        >
+          We currently have 3 snacks and 4 drinks on our menu!
+        </p>
+        <ul
+          class="list-group"
+        >
+          <a
+            href="/snacks"
+          >
+            <li
+              class="list-group-item"
+            >
+              Snack Menu
+            </li>
+          </a>
+          <a
+            href="/drinks"
+          >
+            <li
+              class="list-group-item"
+            >
+              Drinks Menu
+            </li>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
