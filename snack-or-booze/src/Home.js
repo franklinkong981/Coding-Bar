@@ -11,9 +11,7 @@ function Home({numberSnacks, numberDrinks}) {
       <Card>
         <CardBody className="text-center">
           <CardTitle>
-            <p className="font-weight-bold">
-              Welcome to Silicon Valley's Premier Coding Cafe/Bar: Snack or Booze!
-            </p>
+            Welcome to Silicon Valley's Premier Coding Cafe/Bar: Snack or Booze!
           </CardTitle>
           <CardText>
             We currently have {numberSnacks} snacks and {numberDrinks} drinks on our menu!

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <App /> component rendering matches the snapshot for the App component 1`] = `
+<DocumentFragment>
+  <p>
+    Loading …
+  </p>
+</DocumentFragment>
+`;
